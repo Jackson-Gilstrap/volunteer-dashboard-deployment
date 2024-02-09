@@ -1,4 +1,5 @@
 import CreateVolunteerForm from "../components/CreateVolunteerForm";
+import "../styles/main.css";
 const CreateVolunteer = () => {
   return (
     <>

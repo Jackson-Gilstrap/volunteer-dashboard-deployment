@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useFormik } from "formik";
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import "../styles/main.css";
 
 //form validation
 const validate = (values) => {

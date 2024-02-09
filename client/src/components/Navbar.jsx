@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { NavbarData } from "./SidebarData";
+import "../styles/main.css";
 const Navbar = () => {
   return (
     <>

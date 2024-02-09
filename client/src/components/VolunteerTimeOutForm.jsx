@@ -1,5 +1,6 @@
 import { useFormik } from "formik";
 import axios from "axios";
+import "../styles/main.css";
 
 const validate = (values) => {
   const errors = {};

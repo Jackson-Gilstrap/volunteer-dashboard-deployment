@@ -1,5 +1,6 @@
 import ShowVolunteers from "../components/ShowVolunteers";
 import ShowVolunteerWorkSession from "../components/ShowVolunteerWorkSession";
+import "../styles/main.css";
 const Records = () => {
   return (
     <>

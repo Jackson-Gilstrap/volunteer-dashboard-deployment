@@ -1,6 +1,7 @@
 import { useFormik } from "formik";
 import axios from "axios";
 import { useState, useEffect } from "react";
+import "../styles/main.css";
 
 const validate = (values) => {
   const errors = {};
