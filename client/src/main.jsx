@@ -1,10 +1,28 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Route,
+  createRoutesFromElements,
+} from "react-router-dom";
+import App from "./App";
+import CreateVolunteer from "./pages/CreateVolunteer";
+import VolunteerClockIn from "./pages/VolunteerClockIn";
+import VolunteerClockOut from "./pages/VolunteerClockOut";
+import Records from "./pages/Records";
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route element={<App />}>
+      <Route path="/" element={<CreateVolunteer />} />
+      <Route path="/clockIn" element={<VolunteerClockIn />} />
+      <Route path="/clockOut" element={<VolunteerClockOut />} />
+      <Route path="/records" element={<Records />} />
+    </Route>
+  )
+);
+
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-)
+    <RouterProvider router={router} />
+  </React.StrictMode>
+);
