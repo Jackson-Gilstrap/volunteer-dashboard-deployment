@@ -1,5 +1,4 @@
 import VolunteerTimeInForm from "../components/VolunteerTimeInForm";
-import "../styles/pages.css";
 import { useState, useEffect } from "react";
 const VolunteerClockIn = () => {
   const [currentTime, setCurrentTime] = useState("");

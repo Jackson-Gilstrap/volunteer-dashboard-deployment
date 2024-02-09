@@ -1,5 +1,4 @@
 import VolunteerTimeOutForm from "../components/VolunteerTimeOutForm";
-import "../styles/pages.css";
 
 import { useState, useEffect } from "react";
 const VolunteerClockOut = () => {

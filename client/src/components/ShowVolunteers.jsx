@@ -1,7 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
 import UpdateVolunteerModal from "./UpdateVolunteerModal";
-import "../styles/records.css";
 
 const ShowVolunteers = () => {
   const [volunteerList, setVolunteerList] = useState([]);

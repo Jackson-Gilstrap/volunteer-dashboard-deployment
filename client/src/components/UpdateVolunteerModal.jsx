@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { useFormik } from "formik";
 import axios from "axios";
-import "../styles/modal.css";
 
 const UpdateVolunteerModal = ({
   type,

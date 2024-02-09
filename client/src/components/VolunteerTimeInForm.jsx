@@ -1,6 +1,5 @@
 import { useFormik } from "formik";
 import axios from "axios";
-import "../styles/timeSheet.css";
 import { useState, useEffect } from "react";
 
 const validate = (values) => {
