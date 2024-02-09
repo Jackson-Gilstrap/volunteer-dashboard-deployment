@@ -5,7 +5,10 @@ const app = express();
 const { getCurrentDate, getCurrentTime } = require("./utility");
 
 //middleware
-app.use(cors());
+const corsOptions = {
+  origin: "https://volunteer-dashboard-deployment-client.vercel.app",
+};
+app.use(cors(corsOptions));
 app.use(express.json());
 
 //ROUTES
