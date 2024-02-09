@@ -30,7 +30,7 @@ const UpdateVolunteerModal = ({
     onSubmit: async (values) => {
       try {
         const res = await axios.post(
-          "http://localhost:5000/updatevolunteer",
+          "https://volunteer-dashboard-deployment-server.vercel.app/updatevolunteer",
           values
         );
         console.log(res.status);

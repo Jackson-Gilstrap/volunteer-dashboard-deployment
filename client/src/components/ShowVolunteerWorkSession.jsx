@@ -73,7 +73,7 @@ const ShowVolunteerWorkSession = () => {
   const getVolunteerWorkSessions = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:5000/getvolunteerworksessions"
+        "https://volunteer-dashboard-deployment-server.vercel.app/getvolunteerworksessions"
       );
       const promises = res.data.map(async (work_session_obj) => {
         const {

@@ -37,7 +37,7 @@ const VolunteerTimeInForm = ({ isClockIn }) => {
       console.log(values);
       try {
         const res = await axios.post(
-          "http://localhost:5000/volunteertimein",
+          "https://volunteer-dashboard-deployment-server.vercel.app/volunteertimein",
           values
         );
         console.log(res.status);
