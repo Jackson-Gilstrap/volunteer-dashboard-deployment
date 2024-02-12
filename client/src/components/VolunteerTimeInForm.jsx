@@ -144,6 +144,17 @@ const VolunteerTimeInForm = ({ isClockIn }) => {
           {successMessage}
         </p>
       )}
+      <div>
+        <ul>
+          <li>
+            PLease enter your volunteer code associated with your name, work
+            location, and work role
+          </li>
+          <li>
+            Once you hit clock in, in ~10 seconds a confirmation will pop up
+          </li>
+        </ul>
+      </div>
     </>
   );
 };

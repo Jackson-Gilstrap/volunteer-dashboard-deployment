@@ -80,6 +80,16 @@ function VolunteerTimeOutForm({ isClockIn }) {
           {successMessage}
         </p>
       )}
+      <div>
+        <ul>
+          <li>
+            PLease enter your volunteer code that you used to clock in with
+          </li>
+          <li>
+            Once you hit clock out, in ~10 seconds a confirmation will pop up
+          </li>
+        </ul>
+      </div>
     </>
   );
 }
