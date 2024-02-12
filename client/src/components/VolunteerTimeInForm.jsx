@@ -146,11 +146,11 @@ const VolunteerTimeInForm = ({ isClockIn }) => {
       )}
       <div>
         <ul>
-          <li>
-            PLease enter your volunteer code associated with your name, work
+          <li style={{ fontSize: "24px" }}>
+            Please enter your volunteer code associated with your name, work
             location, and work role
           </li>
-          <li>
+          <li style={{ fontSize: "24px" }}>
             Once you hit clock in, in ~10 seconds a confirmation will pop up
           </li>
         </ul>

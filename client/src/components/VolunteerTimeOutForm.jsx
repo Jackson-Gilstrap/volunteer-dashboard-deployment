@@ -82,10 +82,10 @@ function VolunteerTimeOutForm({ isClockIn }) {
       )}
       <div>
         <ul>
-          <li>
-            PLease enter your volunteer code that you used to clock in with
+          <li style={{ fontSize: "24px" }}>
+            Pease enter your volunteer code that you used to clock in with
           </li>
-          <li>
+          <li style={{ fontSize: "24px" }}>
             Once you hit clock out, in ~10 seconds a confirmation will pop up
           </li>
         </ul>
