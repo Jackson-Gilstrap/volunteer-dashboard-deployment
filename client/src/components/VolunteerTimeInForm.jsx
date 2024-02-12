@@ -53,7 +53,7 @@ const VolunteerTimeInForm = ({ isClockIn }) => {
           "There has been an error submitting the form",
           error.message
         );
-        setSuccessMessage(`Successfully clocked in ${volunteer_code}`);
+        setSuccessMessage(`Successfully clocked in ${values.volunteer_code}`);
         resetForm();
       }
       setSubmitting(false);

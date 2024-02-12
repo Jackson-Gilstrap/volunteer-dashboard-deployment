@@ -1,4 +1,5 @@
 import { useFormik } from "formik";
+import { useState } from "react";
 import axios from "axios";
 import "../styles/main.css";
 
@@ -34,7 +35,7 @@ function VolunteerTimeOutForm({ isClockIn }) {
         alert("Form submitted successfully", res.data);
         console.log("Form submitted successfully", res.data);
       } catch (error) {
-        setSuccessMessage(`Successfully clocked out ${volunteer_code}`);
+        setSuccessMessage(`Successfully clocked out ${values.volunteer_code}`);
         console.error(
           "There has been an error submitting the form",
           error.message
