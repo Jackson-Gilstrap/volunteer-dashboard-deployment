@@ -47,14 +47,14 @@ const VolunteerTimeInForm = ({ isClockIn }) => {
             "There was no response from the server and the form has not been submitted"
           );
         } else {
-          setSuccessMessage(`Successfully clocked in`);
-          resetForm();
         }
       } catch (error) {
         console.error(
           "There has been an error submitting the form",
           error.message
         );
+        setSuccessMessage(`Successfully clocked in`);
+        resetForm();
       }
       setSubmitting(false);
       console.log(JSON.stringify(values, null, 2));
