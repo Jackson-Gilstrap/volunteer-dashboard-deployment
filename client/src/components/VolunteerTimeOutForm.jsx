@@ -16,6 +16,7 @@ const validate = (values) => {
 };
 
 function VolunteerTimeOutForm({ isClockIn }) {
+  const [successMessage, setSuccessMessage] = useState("");
   const formik = useFormik({
     initialValues: {
       volunteer_code: "",
@@ -25,15 +26,24 @@ function VolunteerTimeOutForm({ isClockIn }) {
       values.eventType = isClockIn ? "clockIn" : "clockOut";
       console.log(values);
       setSubmitting(true);
-      const res = await axios.post(
-        "https://volunteer-dashboard-deployment-server.vercel.app/volunteertimeout",
-        values
-      );
-      alert("Form submitted successfully", res.data);
-      console.log("Form submitted successfully", res.data);
+      try {
+        const res = await axios.post(
+          "https://volunteer-dashboard-deployment-server.vercel.app/volunteertimeout",
+          values
+        );
+        alert("Form submitted successfully", res.data);
+        console.log("Form submitted successfully", res.data);
+      } catch (error) {
+        setSuccessMessage(`Successfully clocked out ${volunteer_code}`);
+        console.error(
+          "There has been an error submitting the form",
+          error.message
+        );
+
+        resetForm();
+      }
 
       console.log(JSON.stringify(values, null, 2));
-      resetForm();
       setSubmitting(false);
     },
   });
@@ -64,6 +74,11 @@ function VolunteerTimeOutForm({ isClockIn }) {
           {isClockIn ? "Clock in" : "Clock Out"}
         </button>
       </form>
+      {successMessage && (
+        <p style={{ textAlign: "center", color: "limegreen" }}>
+          {successMessage}
+        </p>
+      )}
     </>
   );
 }
