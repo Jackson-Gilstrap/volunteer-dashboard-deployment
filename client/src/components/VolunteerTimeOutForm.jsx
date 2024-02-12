@@ -21,9 +21,10 @@ function VolunteerTimeOutForm({ isClockIn }) {
       volunteer_code: "",
     },
     validate,
-    onSubmit: async (values) => {
+    onSubmit: async (values, { setSubmitting, resetForm }) => {
       values.eventType = isClockIn ? "clockIn" : "clockOut";
       console.log(values);
+      setSubmitting(true);
       const res = await axios.post(
         "https://volunteer-dashboard-deployment-server.vercel.app/volunteertimeout",
         values
@@ -32,6 +33,8 @@ function VolunteerTimeOutForm({ isClockIn }) {
       console.log("Form submitted successfully", res.data);
 
       console.log(JSON.stringify(values, null, 2));
+      resetForm();
+      setSubmitting(false);
     },
   });
   return (

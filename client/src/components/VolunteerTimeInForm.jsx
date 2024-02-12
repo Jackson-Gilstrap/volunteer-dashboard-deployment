@@ -32,9 +32,10 @@ const VolunteerTimeInForm = ({ isClockIn }) => {
       work_role: "",
     },
     validate,
-    onSubmit: async (values) => {
+    onSubmit: async (values, { setSubmitting, resetForm }) => {
       values.eventType = isClockIn ? "clockIn" : "clockOut";
       console.log(values);
+      setSubmitting(true);
       try {
         const res = await axios.post(
           "https://volunteer-dashboard-deployment-server.vercel.app/volunteertimein",
@@ -47,6 +48,7 @@ const VolunteerTimeInForm = ({ isClockIn }) => {
           );
         } else {
           setSuccessMessage(`Successfully clocked in`);
+          resetForm();
         }
       } catch (error) {
         console.error(
@@ -54,7 +56,7 @@ const VolunteerTimeInForm = ({ isClockIn }) => {
           error.message
         );
       }
-
+      setSubmitting(false);
       console.log(JSON.stringify(values, null, 2));
     },
   });
