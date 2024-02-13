@@ -47,6 +47,7 @@ const VolunteerTimeInForm = ({ isClockIn }) => {
             "There was no response from the server and the form has not been submitted"
           );
         } else {
+          console.log(res.status);
         }
       } catch (error) {
         console.error(
