@@ -15,6 +15,10 @@ app.options("*", cors(corsOptions));
 app.use(express.json());
 
 //ROUTES
+
+app.get("/", (req, res) => {
+  res.send("Hello World");
+});
 //create volunteer
 app.post("/createvolunteer", async (req, res) => {
   try {
