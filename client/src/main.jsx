@@ -16,8 +16,8 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route element={<App />}>
       <Route path="/" element={<CreateVolunteer />} />
-      <Route path="/clockIn" element={<VolunteerClockIn />} />
-      <Route path="/clockOut" element={<VolunteerClockOut />} />
+      <Route path="/volunteertimein" element={<VolunteerClockIn />} />
+      <Route path="/volunteertimeout" element={<VolunteerClockOut />} />
       <Route path="/records" element={<Records />} />
     </Route>
   )
