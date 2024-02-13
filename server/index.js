@@ -8,9 +8,9 @@ const { getCurrentDate, getCurrentTime } = require("./utility");
 const corsOptions = {
   origin: "https://volunteer-dashboard-deployment-client.vercel.app",
 };
-app.use(cors());
+app.use(cors(corsOptions));
 
-app.options("*", cors());
+app.options("*", cors(corsOptions));
 
 app.use(express.json());
 
