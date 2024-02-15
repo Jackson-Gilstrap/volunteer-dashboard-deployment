@@ -32,6 +32,11 @@ const Records = () => {
         }}
       >
         {authStatus ? (
+          <div className="records_flex">
+            <ShowVolunteers />
+            <ShowVolunteerWorkSession />
+          </div>
+        ) : (
           <form onSubmit={handleSubmit}>
             <label htmlFor="authCode">
               Admin Code:{" "}
@@ -45,11 +50,6 @@ const Records = () => {
 
             <button type="submit">Submit</button>
           </form>
-        ) : (
-          <div className="records_flex">
-            <ShowVolunteers />
-            <ShowVolunteerWorkSession />
-          </div>
         )}
       </div>
     </>
