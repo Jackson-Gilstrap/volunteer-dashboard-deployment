@@ -138,14 +138,14 @@ const CreateVolunteerForm = () => {
           </button>
         </form>
       ) : (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmitAdmin}>
           <label htmlFor="authCode">
             Admin Code:{" "}
             <input
               type="password"
               name="authCode"
               value={accessCode}
-              onChange={handleChange}
+              onChange={handleChangeAdmin}
             />
           </label>
 
