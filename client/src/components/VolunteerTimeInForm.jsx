@@ -37,27 +37,28 @@ const VolunteerTimeInForm = ({ isClockIn }) => {
       console.log(values);
       setSubmitting(true);
       try {
-        // const res = await axios.post(
-        //   "https://volunteer-dashboard-deployment-server.vercel.app/volunteertimein",
-        //   values
-        // );
-        const response = await fetch(
+        const res = await axios.post(
           "https://volunteer-dashboard-deployment-server.vercel.app/volunteertimein",
-          {
-            method: "POST",
-            header: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify(values),
-          }
+          values
         );
-        if (!response.ok) {
-          console.log(response.status);
+        // const response = await fetch(
+        //   "https://volunteer-dashboard-deployment-server.vercel.app/volunteertimein",
+        //   {
+        //     method: "POST",
+        //     header: {
+        //       "Content-Type": "application/json",
+        //     },
+        //     body: JSON.stringify(values),
+        //   },
+
+        // );
+        if (!res.ok) {
+          console.log(res.status);
           console.log(
             "There was no response from the server and the form has not been submitted"
           );
         } else {
-          console.log(response.status);
+          console.log(res.status);
         }
       } catch (error) {
         console.error(
