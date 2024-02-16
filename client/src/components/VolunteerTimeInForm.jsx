@@ -49,7 +49,8 @@ const VolunteerTimeInForm = ({ isClockIn }) => {
               "Content-Type": "application/json",
             },
             body: JSON.stringify(values),
-          }
+          },
+          { mode: "no-cors" }
         );
         if (!response.ok) {
           console.log(response.status);
