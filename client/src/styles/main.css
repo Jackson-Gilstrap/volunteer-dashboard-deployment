@@ -27,12 +27,12 @@ nav {
   width: 10%;
   height: 100%;
   background-color: #333;
-  position: fixed;
+  /* position: fixed;
   left: 0;
-  top: 0;
-  display: flex;
+  top: 0; */
+  /* display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-around; */
 }
 
 ul {

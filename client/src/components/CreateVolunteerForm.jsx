@@ -61,7 +61,7 @@ const CreateVolunteerForm = () => {
       console.log(values);
       try {
         const res = await axios.post(
-          "https://volunteer-dashboard-deployment-server.vercel.app/createvolunteer",
+          "http://localhost:3006/api/v1/volunteer",
           values
         );
         if (!res) {

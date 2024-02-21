@@ -7,9 +7,7 @@ const ShowVolunteers = () => {
   const [volunteerList, setVolunteerList] = useState([]);
   const getVolunteers = async () => {
     try {
-      const res = await axios.get(
-        "https://volunteer-dashboard-deployment-server.vercel.app/viewvolunteers"
-      );
+      const res = await axios.get("http://localhost:3006/api/v1/volunteers");
       const promises = res.data.map(async (volunteer_obj) => {
         const { volunteer_id, volunteer_code, first_name, last_name } =
           volunteer_obj;

@@ -11,14 +11,16 @@ import CreateVolunteer from "./pages/CreateVolunteer";
 import VolunteerClockIn from "./pages/VolunteerClockIn";
 import VolunteerClockOut from "./pages/VolunteerClockOut";
 import Records from "./pages/Records";
+import HomePage from "./pages/HomePage";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route element={<App />}>
-      <Route path="/" element={<CreateVolunteer />} />
+      <Route path="/" element={<HomePage />} />
+      <Route path="/createvolunteer" element={<CreateVolunteer />} />
       <Route path="/volunteertimein" element={<VolunteerClockIn />} />
       <Route path="/volunteertimeout" element={<VolunteerClockOut />} />
-      <Route path="/records" element={<Records />} />
+      <Route path="/volunteer" element={<Records />} />
     </Route>
   )
 );
